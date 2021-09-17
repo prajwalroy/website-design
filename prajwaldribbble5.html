@@ -1,0 +1,559 @@
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .switch {
+        position: absolute;
+        display: inline-block;
+        width: 45px;
+        height: 22px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider.round {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #ea4c89;
+        -webkit-transition: .1s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: rgba(234, 76, 137, 0.4);
+        ;
+    }
+
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <div style="text-align: center;width: auto;margin:auto;font-family: cursive;font-size:25px;">Dribbble</div>
+        <button class="navbar-toggler order-first" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" style="font-size:17px; font-weight: 600px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inspiration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Find Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Learn Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Go Pro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Higher Designer</a>
+                </li>
+                <button type="submit" class="btn"
+                    style="background-color: #ea4c89; float:right; position: absolute;top: 5px;right:15px;">Sign
+                    Up</button>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="color: #4f3cc9;margin-top: 60px;"><b>DRIBBBLE HIRING</b></p>
+                <h5 style="font-size: 48px;"><b>Hire the world’s top<br> designers</b></h5><br>
+                <p style="font-size:20px;">Our hiring products help you to attract, engage, and connect with qualified
+                    candidates faster than ever.
+                    Find out why the world’s best companies trust Dribbble when hiring design talent.</p>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12 text-center" style="margin-top: 50px;">
+                    <span style="margin-right: 10px">Monthly</span><label class="switch"> <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label><span style="margin-left:55px;">Quaterly </span>
+                    <p style="font-size:15px;margin-top:5px;color: #ea4c89;">Save Up To 30% </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="card"
+                    style="margin-top:50px;margin:0 auto;height:470px;;border-radius:20px;max-width:400px;width: 100%">
+                    <br>
+                    <div style="text-align: center; font-size:25px;"><b>Job Board</b></div>
+                    <p style="text-align: center;font-size: 15px">The #1 job board for hiring designers<br>and creative
+                        professionals. </p>
+                    <h5 style="text-align: center;font-size: 48px;color:black;"><b>$299</b></h5>
+                    <p style="text-align: center;font-size: 14px;">per month
+                        <br style="color: #ea4c89;"> Switch to quarterly billing</p>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;box-shadow:0px 0px 0px 1px #e7e7e9 inset;">Get
+                        Start</button><br>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Upgrade
+                        Profile</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Multi-shot &
+                        video</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Instant
+                        creative portfolio</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Sell
+                        goods
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-12 col-12">
+                <div class="card"
+                    style="margin:0 auto;height:570px;border-radius:20px;max-width:400px;width: 100%;border-style: solid;border-width: 3px;border-color: #ea4c89;">
+                    <br>
+                    <div style="text-align: center; font-size:15px;color: #ea4c89;"><b>MOST POPULAR</b></div>
+                    <div style="text-align: center; font-size:25px;"><b>Pro Business</b></div>
+                    <p style="text-align: center;font-size: 15px">Perfect for freelancers, agencies,<br> and design
+                        teams.</p>
+                    <h5 style="text-align: center;font-size: 48px;color:black"><b>$299</b></h5>
+                    <p style="text-align: center;font-size: 14px;">per month, paid annually<br
+                            style="color: #ea4c89;">Switch to monthly billing</p>
+                    <button type="submit" class="btn default" style="margin:0 auto;background-color:  #ea4c89;;">Get
+                        Start</button><br>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;"
+                            class="fa">&#xf061;</i><b>Everything in Pro</b></p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Multi-shot &
+                        video</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Multi-shot &
+                        video</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Instant
+                        creative portfolio</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Sell
+                        goods
+                        Instant creative<br> portfolio</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="card"
+                    style="margin-top:50px;margin:0 auto;height:470px;;border-radius:20px;max-width:400px;width: 100%">
+                    <br>
+                    <div style="text-align: center; font-size:25px;"><b>Pro</b></div>
+                    <p style="text-align: center;font-size: 15px">Perfect for freelancers, agencies,<br> and design
+                        teams.</p>
+                    <h5 style="text-align: center;font-size: 48px;color:black"><b>$399</b></h5>
+                    <p style="text-align: center;font-size: 14px;">per month, paid annually<br
+                            style="color: #ea4c89;">Switch to monthly billing</p>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;box-shadow:0px 0px 0px 1px #e7e7e9 inset;">Get
+                        Start</button><br>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Upgrade
+                        Profile</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Multi-shot &
+                        video</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Instant
+                        creative portfolio</p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color:#4bb7bf;font-size:16px;margin-right: 15px;" class="fa">&#xf061;</i>Sell
+                        goods
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <img style="width:100%" src="../dominos/assist/d5bg1.jpg">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 style="font-size: 32px;margin-top: 40px;">Connect with the world’s <br>leading design community</h5>
+                <p style="font-size:20px; color: #6e6d7a;">Dribbble is the go-to resource for discovering and connecting
+                    with designers and creative talent around the globe. Our invite-only portfolio profile is an
+                    industry standard and a must-have for professional working designers.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 style="font-size:22px;margin-top: 40px;">Connect with the world’s <br>leading design community</h5>
+                <p style="font-size:20px; color: #6e6d7a;">Dribbble is the go-to resource for discovering and connecting
+                    with designers and creative talent around the globe. Our invite-only portfolio profile is an
+                    industry standard and a must-have for professional working designers.</p>
+            </div>
+
+            <div class="col-lg-6">
+                <h5 style="font-size:22px;margin-top: 40px;">Connect with the world’s <br>leading design community</h5>
+                <p style="font-size:20px; color: #6e6d7a;">Dribbble is the go-to resource for discovering and connecting
+                    with designers and creative talent around the globe. Our invite-only portfolio profile is an
+                    industry standard and a must-have for professional working designers.</p>
+            </div>
+        </div>
+        <div class="row" style="background-color: #0d0c22;">
+            <div class="col-lg-12 col-md-12 col-12">
+                <h4 style="color:white;text-align: center;margin: 20px;font-size: 20px;line-height: 32px;">We’ve helped
+                    some of the world’s
+                    best<br>design-forward companies hire expert creatives.</h4>
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center;">
+                        <i style='font-size:40px;color: white;margin-right: 13px;' class='fab'>&#xf270;</i>
+                        <i style='font-size:40px;color: white;margin-left: 30px;margin:10px;' class='fab'>&#xf09a;</i>
+                        <i style='font-size:40px;color: white;margin-left: 30px;margin:10px;' class='fab'>&#xf232;</i>
+                        <i style='font-size:40px;color: white;margin-left: 30px;margin:10px;' class='fab'>&#xf16d;</i>
+                        <i style='font-size:40px;color: white;margin-left: 30px;margin:10px;' class='fab'>&#xf2ac;</i>
+                        <i style='font-size:40px;color: white;margin-left: 30px;margin:10px;margin-bottom: 30px;'
+                            class='fab'>&#xf0d5;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: #19182d;">
+            <div class="col-lg-12 col-md-12 col-12" style="text-align: center">
+                <h4 style="color:#acabcc;margin: 20px;font-size: 20px;line-height: 32px;">“Dribbble’s candidate pool is
+                    superior to some of the best design recruiters in<br>
+                    the world. From a designer’s perspective, this is the place to get exposure to<br> some of the best
+                    high-quality
+                    companies looking to hire amazing talent.”</h4>
+
+                <img style="width: 56px;height: 56px;" src="../dominos/assist/d51.png">
+                <p style="color: white;">James Kudroz</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-12">
+                <p style="color: #4f3cc9;margin-top: 60px;"><b>JOB BOARD</b></p>
+                <h2><b>The largest job board for designers</b></h2><br>
+                <p style="font-size:20px;color: #6e6d7a;">Post to the #1 job board for hiring designers and creative
+                    <br>professionals in
+                    full-time or freelance / contract roles.</p>
+                <h2 style="font-size: 22px;margin-top:40px;">The largest job board for designers</h2><br>
+                <p style="font-size:18px;color: #6e6d7a;">Over 60k companies have hired designers on <br>Dribbble.</p>
+                <h2 style="font-size: 22px;margin-top:40px;">The largest job board for designers</h2><br>
+                <p style="font-size:18px;color: #6e6d7a;">Over 60k companies have hired designers on <br>Dribbble.</p>
+                <h2 style="font-size: 22px;margin-top:40px;">The largest job board for designers</h2><br>
+                <p style="font-size:18px;color: #6e6d7a;">Over 60k companies have hired designers on <br>Dribbble.</p>
+            </div>
+            <div class="col-lg-5">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+
+            </div>
+            <div class="col-lg-7 col-md-12 col-12">
+                <p style="color: #4f3cc9;margin-top: 60px;"><b>JOB BOARD</b></p>
+                <h2><b>The largest job board for designers</b></h2><br>
+                <p style="font-size:20px;color: #6e6d7a;">Post to the #1 job board for hiring designers and creative
+                    <br>professionals in
+                    full-time or freelance / contract roles.</p>
+                <h2 style="font-size: 22px;margin-top:40px;">The largest job board for designers</h2><br>
+                <p style="font-size:18px;color: #6e6d7a;">Over 60k companies have hired designers on <br>Dribbble.</p>
+                <h2 style="font-size: 22px;margin-top:40px;">The largest job board for designers</h2><br>
+                <p style="font-size:18px;color: #6e6d7a;">Over 60k companies have hired designers on <br>Dribbble.</p>
+                <h2 style="font-size: 22px;margin-top:40px;">The largest job board for designers</h2><br>
+                <p style="font-size:18px;color: #6e6d7a;">Over 60k companies have hired designers on <br>Dribbble.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <img style="width: 100%;" src="../dominos/assist/d52.png">
+            </div>
+            <div class="col-lg-5">
+                <p style="font-size: 42px;">“I feel more inclined to<br> believe that a company <br>values design if
+                    they’re<br>
+                    coming to Dribbble to source<br> designers instead of relying<br> on more generic job boards.”</p>
+                <p><b>Alyssa Graves,</b> Visual Designer</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4  col-md-12 col-12">
+                <div class="card"
+                    style="margin:0 auto;height:970px;border-radius:20px;max-width:250px;box-shadow: whitesmoke 2px 3px 4px 5px;width: 100%;border-style: solid;">
+                    <br>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color: #77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i><b>Job
+                            Board</b></p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color: #77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i><b>Designer
+                            Search</b></p>
+
+                    <h5 style="text-align: center;font-size: 48px;color:black;"><b>$499</b></h5>
+                    <p style="text-align: center;font-size: 14px;">per month</p>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;background-color:  #ea4c89;color: white;">Subscribe</button><br>
+                    <p style="text-align: center;font-size: 15px;">1</p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;background-color:  #ea4c89;color: white;">Subscribe</button><br>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-12 col-12">
+                <div class="card"
+                    style="margin:0 auto;height:970px;border-radius:20px;max-width:250px;box-shadow: whitesmoke 2px 3px 4px 5px;width: 100%;border-style: solid;">
+                    <br>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color: #77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i><b>Job
+                            Board</b></p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color: #77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i><b>Designer
+                            Search</b></p>
+
+                    <h5 style="text-align: center;font-size: 48px;color:black;"><b>$499</b></h5>
+                    <p style="text-align: center;font-size: 14px;">per month</p>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;background-color:  #ea4c89;color: white;">Subscribe</button><br>
+                    <p style="text-align: center;font-size: 15px;">1</p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;background-color:  #ea4c89;color: white;">Subscribe</button><br>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-12 col-12">
+                <div class="card"
+                    style="margin:0 auto;height:970px;border-radius:20px;max-width:250px;box-shadow: whitesmoke 2px 3px 4px 5px;width: 100%;border-style: solid;">
+                    <br>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color: #77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i><b>Job
+                            Board</b></p>
+                    <p style="margin-left:50px;font-size: 15px;"><i
+                            style="color: #77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i><b>Designer
+                            Search</b></p>
+
+                    <h5 style="text-align: center;font-size: 48px;color:black;"><b>$499</b></h5>
+                    <p style="text-align: center;font-size: 14px;">per month</p>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;background-color:  #ea4c89;color: white;">Subscribe</button><br>
+                    <p style="text-align: center;font-size: 15px;">1</p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <p style="text-align: center;font-size: 15px;"><i
+                            style="color:#77e0b5;font-size:16px;margin-right: 15px;" class="fa">&#xf714;</i></p>
+                    <hr>
+                    <button type="submit" class="btn default"
+                        style="margin:0 auto;background-color:  #ea4c89;color: white;">Subscribe</button><br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container-fluid">
+        <div class="row" style="background-color: whitesmoke;">
+            <br><br>
+            <div class="col-lg-3 col-md-3">
+                <p style="margin-left: 30px;">Dribbble is the world’s leading community for creatives to share,
+                    grow,
+                    and
+                    get hired.</p>
+                <br>
+                <img src="../dominos/assist/fb.png" style="padding-left: 40px"
+                    class="mx auto d-block;margin-right:10px">
+                <img src="../dominos/assist/instagram.png" style="padding-left:10px"
+                    class="mx auto d-block;margin-right:8spx">
+                <img src="../dominos/assist/twitter.png" style="padding-left:1s0px"
+                    class="mx auto d-block;margin-right:10px">
+            </div>
+            <div class="col-lg-3 col-md-3 ">
+                <b>For designers</b><br>
+                Go Pro!<br>
+                Explore design work<br>
+                Design blog<br>
+                Overtime podcast<br>
+                Dribbble meetups<br>
+                Playoffs<br>
+                Weekly Warm-Up<br>
+                Code of conduct<br>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <b>For designers</b><br>
+                Go Pro!<br>
+                Explore design work<br>
+                Design blog<br>
+                Overtime podcast<br>
+                Dribbble meetups<br>
+                Playoffs<br>
+                Weekly Warm-Up<br>
+                Code of conduct<br>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <b>For designers</b><br>
+                Go Pro!<br>
+                Explore design work<br>
+                Design blog<br>
+                Overtime podcast<br>
+                Dribbble meetups<br>
+                Playoffs<br>
+                Weekly Warm-Up<br>
+                Code of conduct<br>
+            </div>
+            <hr style="width:100%;">
+
+        </div>
+        <div class="row" style="background-color:whitesmoke;">
+            <div class="col-lg-3">
+                <p style="text-align: center;">© 2021 Dribbble. All rights reserved.</p>
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3">
+                <p style="text-align: center;">16,219,753 shots dribbbled<img src="../dominos/assist/dribberboll.svg">
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
